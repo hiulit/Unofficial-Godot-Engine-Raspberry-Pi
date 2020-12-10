@@ -1,2 +1,3 @@
-# Godot Engine Raspberry Pi
-Godot Engine binaries for the Raspberry Pi
+# Unnoficial Godot Engine Raspberry Pi
+
+Unnoficial Godot Engine editor binaries and export templates for the Raspberry Pi
