@@ -2,7 +2,7 @@
 
 Unnoficial [Godot Engine](https://godotengine.org/) editor binaries and export templates for the Raspberry Pi.
 
-All the binaries are compiled on a Raspberry Pi 4, following the [official documentation for compiling Godot in Linux](https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html).
+All the binaries are compiled on a non-overcloked **Raspberry Pi 4 4GB** running [Raspberry Pi OS](https://www.raspberrypi.org/software/operating-systems/), following the [official documentation for compiling Godot in Linux](https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html).
 
 The scons parameters used to compile both the editor and the export templates are a mix between [FRT](https://github.com/efornara/frt) by [@efornara](https://github.com/efornara/) and this [blog post](https://bits.p1x.in/raspberry-pi-4-as-perfect-indie-console/) by [@w84death](https://github.com/w84death/).
 
@@ -17,6 +17,8 @@ scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=c
 - Currently only the Raspberry Pi 4 is supported.
 - Godot 2.1.6 is the only version of the editor that runs perfectly on the Raspberry Pi 4. Greater versions (>= 3.1.x) do work, but they are very laggy.
 - Godot 3.0.x versions don't work at all because they don't support GLES2, only GLES3, and the Raspberry Pi doesn't support GLES3. That's why those version aren't here.
+- Don't expect 3D games to work.
+- Expect 2D to work if they don't use any "fancy VFX", like particles, heavy shaders and other CPU/GPU demanding stuff.
 
 ## How to run the editor
 
@@ -35,6 +37,8 @@ sudo chmod +x godot_x.x.x_rpi4_editor.bin
 ```
 
 ## How to use the export templates
+
+You don't have to use a Raspberry Pi to export a game for it. You can use any computer running any OS supported by Godot.
 
 ### Godot 2.x
 
@@ -56,6 +60,29 @@ sudo chmod +x godot_x.x.x_rpi4_editor.bin
 - Uncheck `Export With Debug`.
 - Optionally, after the game is packed, you can rename the extension of the game's executable binary from `.x86` to `.rpi4` to avoid confusion.
 
+## Exporting a PCK file
+
+You can just export a `.pck` file and run it with the export templates in this repository.
+
+### Godot 2.x
+
+- In the editor, go to `Project -> Export`.
+- Select the `Linux/X11` template.
+- In `Binary Format`, uncheck `64 bits`.
+- Click `Export PCK/Zip`.
+- Enter the name of your game with the `.pck` extension.
+- Click `OK`.
+
+### Godot 3.x
+
+- In the editor, go to `Project -> Export`.
+- Select the `Linux/X11` template.
+- In `Binary Format`, uncheck `64 bits`.
+- Click `Export PCK/Zip`.
+- Uncheck `Export With Debug`.
+- Enter the name of your game with the `.pck` extension.
+- Click `Save`.
+
 ## How to run a game
 
 If the `.pck` file is compiled in the executable binary or it has the same name as the executable binary and they are both in the same directory, you can just run the executable binary.
@@ -72,6 +99,19 @@ If the `.pck` file has a different name or it's in a different directory than th
 
 # Using the export template binaries from this repository.
 ./godot_x.x.x_rpi4_export-template.bin --main-pack "/path/to/the/pck/file.pck"
+```
+
+If the game you are trying to run uses GLES3, as the Raspberri Pi doesn't work with GLES3, you'll have to pass the `--video-driver GLES2` parameter.
+
+```
+# Using your own exported binary.
+# Embedded PCK.
+./name_of_your_godot_game.ext --video-driver GLES2
+# Independant PCK.
+./name_of_your_godot_game.ext --main-pack "/path/to/the/pck/file.pck" --video-driver GLES2
+
+# Using the export template binaries from this repository.
+./godot_x.x.x_rpi4_export-template.bin --main-pack "/path/to/the/pck/file.pck" --video-driver GLES2
 ```
 
 ## Changelog
@@ -93,4 +133,4 @@ Thanks to:
 ## LICENSE
 
 - Source code: [MIT License](/LICENSE).
-- Godot - Game Engine: [MIT License](/LICENSE_GODOT).
+- Godot - Game Engine: [MIT License](/LICENSE_GODOT.txt).
