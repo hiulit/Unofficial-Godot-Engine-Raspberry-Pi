@@ -83,9 +83,9 @@ You don't have to use a Raspberry Pi to export a game for it. You can use any co
 - Uncheck `Export With Debug`.
 - Optionally, after the game is packed, you can rename the extension of the game's executable binary from `.x86` to `.rpi4` to avoid confusion.
 
-## Exporting a PCK file
+## Exporting an independant PCK file
 
-You can just export a `.pck` file and run it with the export templates in this repository.
+You can just export a `.pck` file and run it with the export templates from this repository.
 
 ### Godot 2.x
 
@@ -149,13 +149,13 @@ If you get this error when trying to play a game:
 
 > Your video card driver does not support any of the supported OpenGL versions. Please update your drivers or if you have a very old or integrated GPU upgrade it.
 
-That means that the game you are trying to run uses the GLES3 video driver, which the Raspberri Pi doesn't support. 
+It means that the game you are trying to run uses the GLES3 video driver, which the Raspberri Pi doesn't support. 
 
-You'll have to force Godot to use the GLES video driver by passing the `--video-driver GLES2` parameter, like this:
+You'll have to force Godot to use the GLES3 video driver by passing the `--video-driver GLES2` parameter, like this:
 
 ```
 # Using your own exported binary.
-## Embedded PCK.
+## Embedded/compiled PCK.
 ./name_of_your_godot_game.ext --video-driver GLES2
 ## Independant PCK.
 ./name_of_your_godot_game.ext --main-pack "/path/to/the/pck/file.pck" --video-driver GLES2
