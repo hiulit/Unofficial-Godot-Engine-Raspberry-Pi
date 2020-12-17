@@ -1,16 +1,9 @@
 # Unnoficial Raspberry Pi Godot Engine
 
-Unnoficial [Godot Engine](https://godotengine.org/) editor binaries and export templates for the Raspberry Pi.
+Unnoficial [Godot Engine](https://godotengine.org/) editor and export templates binaries for the Raspberry Pi.
 
-All the binaries are compiled on a non-overcloked **Raspberry Pi 4 4GB** running [Raspberry Pi OS](https://www.raspberrypi.org/software/operating-systems/), following the [official documentation for compiling Godot in Linux](https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html).
+All the binaries are compiled and tested on a non-overcloked **Raspberry Pi 4 4GB** running [Raspberry Pi OS](https://www.raspberrypi.org/software/operating-systems/), following the [official documentation for compiling Godot in Linux](https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html).
 
-The scons parameters used to compile both the editor and the export templates are a mix between [FRT](https://github.com/efornara/frt) by [@efornara](https://github.com/efornara/) and this [blog post](https://bits.p1x.in/raspberry-pi-4-as-perfect-indie-console/) by [@w84death](https://github.com/w84death/).
-
-```
-scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=cortex-a72 -mcpu=cortex-a72 -mfloat-abi=hard -mlittle-endian -munaligned-access -mfpu=neon-fp-armv8" -j 4
-```
-
-*The lines above are used to compile the editor. To compile the export templates, use `target=release` and `tools=no`*.
 
 **NOTES**:
 
@@ -20,7 +13,23 @@ scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=c
 - Don't expect 3D games to work.
 - Expect 2D to work if they don't use any "fancy VFX", like particles, heavy shaders and other CPU/GPU demanding stuff.
 
-## How to run the editor
+
+The scons parameters and flags used to compile both the editor and the export templates are a mix between [FRT](https://github.com/efornara/frt) by [@efornara](https://github.com/efornara/) and this [blog post](https://bits.p1x.in/raspberry-pi-4-as-perfect-indie-console/) by [@w84death](https://github.com/w84death/).
+
+## Editor
+
+### Support and downloads
+
+|  | 2.1.6 | 3.0.6 | 3.1.0 | 3.1.1 | 3.1.2 | 3.2.0 | 3.2.1 | 3.2.2 | 3.2.3 | 3.2.4 beta 4 |
+|-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Status | &#x2713; | &#x2717; | * | * | * | * | * | * | * | &#x2713; |
+| Download | URL | &#x2717; | URL | URL | URL | URL | URL | URL | URL | URL |
+
+- ✓: Works perfectly.
+- ✗: Doesn't work.
+- \*: It works, but it's laggy/unresponsive at fullscreen (1920x1200). Making the editor 1/2 or 1/3 of that size makes it run better.
+
+### How to launch the editor
 
 To open the editor, run:
 
@@ -34,6 +43,30 @@ You might need to give executable permissions to the binary. If that's the case,
 
 ```
 sudo chmod +x godot_x.x.x_rpi4_editor.bin
+```
+
+### Scons parameters and flags used to compile
+
+```
+scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=cortex-a72 -mcpu=cortex-a72 -mfloat-abi=hard -mlittle-endian -munaligned-access -mfpu=neon-fp-armv8" -j4
+```
+
+## Export templates
+
+## Support and downloads
+
+|  | 2.1.6 | 3.0.6 | 3.1.0 | 3.1.1 | 3.1.2 | 3.2.0 | 3.2.1 | 3.2.2 | 3.2.3 | 3.2.4 beta 4 |
+|-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Status | &#x2713; | &#x2717; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
+| Download | URL | &#x2717; | URL | URL | URL | URL | URL | URL | URL | URL |
+
+- ✓: Works perfectly.
+- ✗: Doesn't work.
+
+### Scons parameters and flags used to compile
+
+```
+scons platform=x11 target=release tools=no use_llvm=yes CCFLAGS="-mtune=cortex-a72 -mcpu=cortex-a72 -mfloat-abi=hard -mlittle-endian -munaligned-access -mfpu=neon-fp-armv8" -j4
 ```
 
 ## How to use the export templates
