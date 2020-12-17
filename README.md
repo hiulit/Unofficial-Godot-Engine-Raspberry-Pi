@@ -141,7 +141,7 @@ You'll have to pass the `.pck` file's path using the `--main-pack` option, like 
 
 If the game you are trying to play doesn't work, it will most likely be because it was made with another version of Godot.
 
-It could also be because it uses GDNative or C++, which the Raspberry Pi binaries doesn't support.
+It could also be because it uses GDNative or C#, which the Raspberry Pi binaries doesn't support.
 
 ### Force Godot to use the GLES2 video render
 
