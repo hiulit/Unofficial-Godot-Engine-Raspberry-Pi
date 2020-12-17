@@ -23,7 +23,7 @@ Currently only the Raspberry Pi 4 is supported.
 |  | 2.1.6 | 3.0.6 | 3.1.0 | 3.1.1 | 3.1.2 | 3.2.0 | 3.2.1 | 3.2.2 | 3.2.3 | 3.2.4 beta 4 |
 |-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | Status | &#x2713; | &#x2717; | * | * | * | * | * | * | * | &#x2713; |
-| Download | URL | &#x2717; | URL | URL | URL | URL | URL | URL | URL | URL |
+| Download | [godot_2.1.6_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_2.1.6_rpi4_editor.bin) | &#x2717; | [godot_3.1.0_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.0_rpi4_editor.bin) | [godot_3.1.1_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.1_rpi4_editor.bin) | [godot_3.1.2_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.2_rpi4_editor.bin) | [godot_3.2.0_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.0_rpi4_editor.bin) | [godot_3.2.1_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.1_rpi4_editor.bin) | [godot_3.2.3_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_editor.bin) | [godot_3.2.3_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_editor.bin) | [godot_3.2.4.beta.4_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.4.beta.4_rpi4_editor.bin) |
 
 - ✓: Works perfectly.
 - ✗: Doesn't work.
@@ -52,7 +52,7 @@ sudo chmod +x godot_x.x.x_rpi4_editor.bin
 |  | 2.1.6 | 3.0.6 | 3.1.0 | 3.1.1 | 3.1.2 | 3.2.0 | 3.2.1 | 3.2.2 | 3.2.3 | 3.2.4 beta 4 |
 |-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | Status | &#x2713; | &#x2717; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
-| Download | URL | &#x2717; | URL | URL | URL | URL | URL | URL | URL | URL |
+| Download | [godot_2.1.6_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_2.1.6_rpi4_export-template.bin) | &#x2717; | [godot_3.1.0_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.0_rpi4_export-template.bin) | [godot_3.1.1_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.1_rpi4_export-template.bin) | [godot_3.1.2_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.2_rpi4_export-template.bin) | [godot_3.2.0_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.0_rpi4_export-template.bin) | [godot_3.2.1_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.1_rpi4_export-template.bin) | [godot_3.2.3_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_export-template.bin) | [godot_3.2.3_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_export-template.bin) | [odot_3.2.4.beta.4_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.4.beta.4_rpi4_export-template.bin) |
 
 - ✓: Works perfectly.
 - ✗: Doesn't work.
@@ -143,7 +143,7 @@ If the game you are trying to play doesn't work, it will most likely be because 
 
 It could also be because it uses GDNative or C++ with the Raspberry Pi binaries doesn't support.
 
-## Force Godot to use the GLES2 video render
+### Force Godot to use the GLES2 video render
 
 If you get this error when trying to play a game:
 
