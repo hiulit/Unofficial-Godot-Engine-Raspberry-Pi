@@ -1,4 +1,4 @@
-# Unofficial Godot Engine Raspberry Pi ![GitHub release (latest by date)](https://img.shields.io/github/v/release/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi)
+# Unofficial Godot Engine for the Raspberry Pi ![GitHub release (latest by date)](https://img.shields.io/github/v/release/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi)
 
 Unofficial [Godot Engine](https://godotengine.org/) editor and export templates binaries for the Raspberry Pi.
 
