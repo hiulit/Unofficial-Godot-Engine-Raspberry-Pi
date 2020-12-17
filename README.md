@@ -4,17 +4,17 @@ Unnoficial [Godot Engine](https://godotengine.org/) editor and export templates 
 
 All the binaries are compiled and tested on a non-overcloked **Raspberry Pi 4 4GB** running [Raspberry Pi OS](https://www.raspberrypi.org/software/operating-systems/), following the [official documentation for compiling Godot in Linux](https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html).
 
-
-**NOTES**:
-
-- Currently only the Raspberry Pi 4 is supported.
-- Godot 2.1.6 is the only version of the editor that runs perfectly on the Raspberry Pi 4. Greater versions (>= 3.1.x) do work, but they are very laggy.
-- Godot 3.0.x versions don't work at all because they don't support GLES2, only GLES3, and the Raspberry Pi doesn't support GLES3. That's why those version aren't here.
-- Don't expect 3D games to work.
-- Expect 2D to work if they don't use any "fancy VFX", like particles, heavy shaders and other CPU/GPU demanding stuff.
-
-
 The scons parameters and flags used to compile both the editor and the export templates are a mix between [FRT](https://github.com/efornara/frt) by [@efornara](https://github.com/efornara/) and this [blog post](https://bits.p1x.in/raspberry-pi-4-as-perfect-indie-console/) by [@w84death](https://github.com/w84death/).
+
+```
+scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=cortex-a72 -mcpu=cortex-a72 -mfloat-abi=hard -mlittle-endian -munaligned-access -mfpu=neon-fp-armv8" -j4
+```
+
+*The scons parameters above are used to compile the editor. To compile the export templates, `target=release` and `tools=no` must be used*.
+
+**NOTE**:
+
+Currently only the Raspberry Pi 4 is supported.
 
 ## Editor
 
@@ -45,15 +45,9 @@ You might need to give executable permissions to the binary. If that's the case,
 sudo chmod +x godot_x.x.x_rpi4_editor.bin
 ```
 
-### Scons parameters and flags used to compile
-
-```
-scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=cortex-a72 -mcpu=cortex-a72 -mfloat-abi=hard -mlittle-endian -munaligned-access -mfpu=neon-fp-armv8" -j4
-```
-
 ## Export templates
 
-## Support and downloads
+### Support and downloads
 
 |  | 2.1.6 | 3.0.6 | 3.1.0 | 3.1.1 | 3.1.2 | 3.2.0 | 3.2.1 | 3.2.2 | 3.2.3 | 3.2.4 beta 4 |
 |-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -63,17 +57,13 @@ scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=c
 - ✓: Works perfectly.
 - ✗: Doesn't work.
 
-### Scons parameters and flags used to compile
+### How to use the export templates
 
-```
-scons platform=x11 target=release tools=no use_llvm=yes CCFLAGS="-mtune=cortex-a72 -mcpu=cortex-a72 -mfloat-abi=hard -mlittle-endian -munaligned-access -mfpu=neon-fp-armv8" -j4
-```
-
-## How to use the export templates
+**NOTE**:
 
 You don't have to use a Raspberry Pi to export a game for it. You can use any computer running any OS supported by Godot.
 
-### Godot 2.x
+#### Godot 2.x
 
 - In the editor, go to `Export`.
 - Select the `Linux/X11` template.
@@ -83,7 +73,7 @@ You don't have to use a Raspberry Pi to export a game for it. You can use any co
 - Click `Export`.
 - You can use the `.rpi4` extension when naming the exported game.
 
-### Godot 3.x
+#### Godot 3.x
 
 - In the editor, go to `Project -> Export`.
 - Select the `Linux/X11` template.
