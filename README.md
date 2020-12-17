@@ -1,6 +1,6 @@
-# Unoficial Godot Engine Raspberry Pi ![GitHub release (latest by date)](https://img.shields.io/github/v/release/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi)
+# Unofficial Godot Engine Raspberry Pi ![GitHub release (latest by date)](https://img.shields.io/github/v/release/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi)
 
-Unoficial [Godot Engine](https://godotengine.org/) editor and export templates binaries for the Raspberry Pi.
+Unofficial [Godot Engine](https://godotengine.org/) editor and export templates binaries for the Raspberry Pi.
 
 All the binaries are compiled and tested on a non-overcloked **Raspberry Pi 4 4GB** running [Raspberry Pi OS](https://www.raspberrypi.org/software/operating-systems/), following the [official documentation for compiling Godot in Linux](https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html).
 
