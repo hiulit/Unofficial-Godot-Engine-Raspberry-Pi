@@ -108,13 +108,24 @@ You can just export a `.pck` file and run it with the export templates in this r
 
 ## How to run a game
 
-If the `.pck` file is compiled in the executable binary or it has the same name as the executable binary and they are both in the same directory, you can just run the executable binary.
+### Case 1
+
+- The `.pck` file is embedded/compiled in the executable binary.
+- The `.pck` file has the same name as the executable binary and they are both in the same directory.
+
+You can just run the executable binary, like this:
 
 ```
 ./name_of_your_godot_game.ext
 ```
 
-If the `.pck` file has a different name or it's in a different directory than the executable binary, or you are using an independant `.pck` file, you'll have to pass its path using the `--main-pack` option.
+### Case 2
+
+- The `.pck` file has a different name than the executable binary.
+- The `.pck` file is in a different directory than the executable binary.
+- You are using an independant `.pck` file.
+
+You'll have to pass the `.pck` file's path using the `--main-pack` option, like this:
 
 ```
 # Using your own exported binary.
@@ -124,13 +135,29 @@ If the `.pck` file has a different name or it's in a different directory than th
 ./godot_x.x.x_rpi4_export-template.bin --main-pack "/path/to/the/pck/file.pck"
 ```
 
-If the game you are trying to run uses GLES3, as the Raspberri Pi doesn't work with GLES3, you'll have to pass the `--video-driver GLES2` parameter.
+## Troubleshooting
+
+### A game doesn't launch or crashes
+
+If the game you are trying to play doesn't work, it will most likely be because it was made with another version of Godot.
+
+It could also be because it uses GDNative or C++ with the Raspberry Pi binaries doesn't support.
+
+## Force Godot to use the GLES2 video render
+
+If you get this error when trying to play a game:
+
+> Your video card driver does not support any of the supported OpenGL versions. Please update your drivers or if you have a very old or integrated GPU upgrade it.
+
+That means that the game you are trying to run uses the GLES3 video driver, which the Raspberri Pi doesn't support. 
+
+You'll have to force Godot to use the GLES video driver by passing the `--video-driver GLES2` parameter, like this:
 
 ```
 # Using your own exported binary.
-# Embedded PCK.
+## Embedded PCK.
 ./name_of_your_godot_game.ext --video-driver GLES2
-# Independant PCK.
+## Independant PCK.
 ./name_of_your_godot_game.ext --main-pack "/path/to/the/pck/file.pck" --video-driver GLES2
 
 # Using the export template binaries from this repository.
