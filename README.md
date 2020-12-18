@@ -16,7 +16,10 @@ scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=c
 
 - Currently only the Raspberry Pi 4 is supported. In case you only need to use export templates, you can use the ones from [FRT: a Godot "platform" targeting single board computers](https://github.com/efornara/frt), which offers support for multiple Raspberry Pi revisions.
 - The Raspberry Pi only supports GLES2.
+- The Raspberry Pi doesn't support GPU paricles, only CPU particles.
 - We don't have Godot 3.0.6 binaries because it doesn't have GLES2 support, only GLES3.
+
+If you would like official Godot support for the Raspberry Pi, there is [proposal](https://github.com/godotengine/godot-proposals/issues/988) about it. Go there and give us a thumbs up so we can get it 👍 😉 !
 
 ## Table of contents
 
