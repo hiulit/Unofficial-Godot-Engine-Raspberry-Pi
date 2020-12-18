@@ -12,6 +12,8 @@ scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=c
 
 *The SCons parameters and flags shown above are used to compile the editor. To compile the export templates, `target=release` and `tools=no` must be used*.
 
+Up until `3.2.4 beta 4` there was an [audio issue](https://github.com/godotengine/godot/pull/43928) with Godot on a Raspberry Pi. To compile prior versions with the audio issue fixed, all references to `uint8_t` must be changed to `int16_t` in `drivers/alsa/audio_driver_alsa.cpp`.
+
 **NOTES**:
 
 - Currently only the Raspberry Pi 4 is supported. In case you only need to use export templates, you can use the ones from [FRT: a Godot "platform" targeting single board computers](https://github.com/efornara/frt), which offers support for multiple Raspberry Pi revisions.
