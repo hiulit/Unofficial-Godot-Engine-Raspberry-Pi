@@ -4,30 +4,60 @@ Unofficial [Godot Engine](https://godotengine.org/) editor and export templates 
 
 All the binaries are compiled and tested on a non-overcloked **Raspberry Pi 4 4GB** running [Raspberry Pi OS](https://www.raspberrypi.org/software/operating-systems/), following the [official documentation for compiling Godot in Linux](https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html).
 
-The scons parameters and flags used to compile both the editor and the export templates are a mix between [FRT](https://github.com/efornara/frt) by [@efornara](https://github.com/efornara/) and this [blog post](https://bits.p1x.in/raspberry-pi-4-as-perfect-indie-console/) by [@w84death](https://github.com/w84death/).
+The SCons parameters and flags used to compile both the editor and the export templates are a mix between [FRT](https://github.com/efornara/frt) by [@efornara](https://github.com/efornara/) and this [blog post](https://bits.p1x.in/raspberry-pi-4-as-perfect-indie-console/) by [@w84death](https://github.com/w84death/).
 
 ```
 scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=cortex-a72 -mcpu=cortex-a72 -mfloat-abi=hard -mlittle-endian -munaligned-access -mfpu=neon-fp-armv8" -j4
 ```
 
-*The scons parameters above are used to compile the editor. To compile the export templates, `target=release` and `tools=no` must be used*.
+*The SCons parameters and flags shown above are used to compile the editor. To compile the export templates, `target=release` and `tools=no` must be used*.
 
-**NOTE**:
+**NOTES**:
 
-Currently only the Raspberry Pi 4 is supported.
+- Currently only the Raspberry Pi 4 is supported. If you just need to use export templates, you can use the ones from [FRT: a Godot "platform" targeting single board computers](https://github.com/efornara/frt).
+- We don't have Godot 3.0.6 binaries because that version doesn't have GLES2 support, only GLES3, and the Raspberry Pi only supports GLES2.
+
+## Downloads
+
+- Godot 2.1.6
+  - [Editor (IDE)](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_2.1.6_rpi4_editor.bin)
+  - [Export template](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_2.1.6_rpi4_export-template.bin)
+- Godot 3.1.0
+  - [Editor (IDE)](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.0_rpi4_editor.bin)
+  - [Export template](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.0_rpi4_export-template.bin)
+- Godot 3.1.1
+  - [Editor (IDE)](thtps://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.1_rpi4_editor.bin)
+  - [Export template](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.1_rpi4_export-template.bin)
+- Godot 3.1.2
+  - [Editor (IDE)](thtps://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.2_rpi4_editor.bin)
+  - [Export template](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.2_rpi4_export-template.bin)
+- Godot 3.2.0
+  - [Editor (IDE)](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.0_rpi4_editor.bin)
+  - [Export template](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.0_rpi4_export-template.bin)
+- Godot 3.2.1
+  - [Editor (IDE)](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.1_rpi4_editor.bin)
+  - [Export template](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.1_rpi4_export-template.bin)
+- Godot 3.2.2
+  - [Editor (IDE)](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.2_rpi4_editor.bin)
+  - [Export template](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_export-template.bin)
+- Godot 3.2.3
+  - [Editor (IDE)](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_editor.bin)
+  - [Export template](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_export-template.bin)
+- Godot 3.2.4 beta 4
+  - [Editor (IDE)](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.4.beta.4_rpi4_editor.bin)
+  - [Export template](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.4.beta.4_rpi4_export-template.bin)
+
+## Status
+
+|  | 2.1.6 | 3.1.0 | 3.1.1 | 3.1.2 | 3.2.0 | 3.2.1 | 3.2.2 | 3.2.3 | 3.2.4 beta 4 |
+|-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Editor (IDE) | &#x2713; | * | * | * | * | * | * | * | &#x2713; |
+| Export templates | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
+
+- &#x2713;: Works perfectly.
+- \*: It works, but it's laggy/unresponsive at fullscreen (1920x1200). Making the editor 1/2 or 1/3 of that size makes it run better.
 
 ## Editor
-
-### Support and downloads
-
-|  | 2.1.6 | 3.0.6 | 3.1.0 | 3.1.1 | 3.1.2 | 3.2.0 | 3.2.1 | 3.2.2 | 3.2.3 | 3.2.4 beta 4 |
-|-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| Status | &#x2713; | &#x2717; | * | * | * | * | * | * | * | &#x2713; |
-| Download | [godot_2.1.6_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_2.1.6_rpi4_editor.bin) | &#x2717; | [godot_3.1.0_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.0_rpi4_editor.bin) | [godot_3.1.1_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.1_rpi4_editor.bin) | [godot_3.1.2_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.2_rpi4_editor.bin) | [godot_3.2.0_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.0_rpi4_editor.bin) | [godot_3.2.1_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.1_rpi4_editor.bin) | [godot_3.2.3_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_editor.bin) | [godot_3.2.3_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_editor.bin) | [godot_3.2.4.beta.4_rpi4_editor.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.4.beta.4_rpi4_editor.bin) |
-
-- ✓: Works perfectly.
-- ✗: Doesn't work.
-- \*: It works, but it's laggy/unresponsive at fullscreen (1920x1200). Making the editor 1/2 or 1/3 of that size makes it run better.
 
 ### How to launch the editor
 
@@ -46,16 +76,6 @@ sudo chmod +x godot_x.x.x_rpi4_editor.bin
 ```
 
 ## Export templates
-
-### Support and downloads
-
-|  | 2.1.6 | 3.0.6 | 3.1.0 | 3.1.1 | 3.1.2 | 3.2.0 | 3.2.1 | 3.2.2 | 3.2.3 | 3.2.4 beta 4 |
-|-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| Status | &#x2713; | &#x2717; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
-| Download | [godot_2.1.6_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_2.1.6_rpi4_export-template.bin) | &#x2717; | [godot_3.1.0_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.0_rpi4_export-template.bin) | [godot_3.1.1_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.1_rpi4_export-template.bin) | [godot_3.1.2_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.2_rpi4_export-template.bin) | [godot_3.2.0_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.0_rpi4_export-template.bin) | [godot_3.2.1_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.1_rpi4_export-template.bin) | [godot_3.2.3_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_export-template.bin) | [godot_3.2.3_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_export-template.bin) | [odot_3.2.4.beta.4_rpi4_export-template.bin](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.4.beta.4_rpi4_export-template.bin) |
-
-- ✓: Works perfectly.
-- ✗: Doesn't work.
 
 ### How to use the export templates
 
