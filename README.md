@@ -17,6 +17,16 @@ scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=c
 - Currently only the Raspberry Pi 4 is supported. If you just need to use export templates, you can use the ones from [FRT: a Godot "platform" targeting single board computers](https://github.com/efornara/frt).
 - We don't have Godot 3.0.6 binaries because that version doesn't have GLES2 support, only GLES3, and the Raspberry Pi only supports GLES2.
 
+## Table of contents
+
+- [Downloads](#downloads)
+- [Status](#status)
+- [How to launch the editor (IDE)](#how-to-launch-the-editor-ide)
+- [How to export a game using the export templates](#how-to-export-a-game-using-the-export-templates)
+- [How to export an independant PCK file](#how-to-export-an-independant-pck-file)
+- [How to run a game](#how-to-run-a-game)
+- [Troubleshooting](#troubleshooting)
+
 ## Downloads
 
 - Godot 2.1.6
@@ -26,10 +36,10 @@ scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=c
   - [Editor (IDE)](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.0_rpi4_editor.bin)
   - [Export template](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.0_rpi4_export-template.bin)
 - Godot 3.1.1
-  - [Editor (IDE)](thtps://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.1_rpi4_editor.bin)
+  - [Editor (IDE)](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.1_rpi4_editor.bin)
   - [Export template](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.1_rpi4_export-template.bin)
 - Godot 3.1.2
-  - [Editor (IDE)](thtps://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.2_rpi4_editor.bin)
+  - [Editor (IDE)](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.2_rpi4_editor.bin)
   - [Export template](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.2_rpi4_export-template.bin)
 - Godot 3.2.0
   - [Editor (IDE)](https://github.com/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.0_rpi4_editor.bin)
@@ -57,9 +67,7 @@ scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=c
 - &#x2713;: Works perfectly.
 - \*: It works, but it's laggy/unresponsive at fullscreen (1920x1200). Making the editor 1/2 or 1/3 of that size makes it run better.
 
-## Editor
-
-### How to launch the editor
+## How to launch the editor (IDE)
 
 To open the editor, run:
 
@@ -75,15 +83,13 @@ You might need to give executable permissions to the binary. If that's the case,
 sudo chmod +x godot_x.x.x_rpi4_editor.bin
 ```
 
-## Export templates
-
-### How to use the export templates
+## How to export a game using the export templates
 
 **NOTE**:
 
 You don't have to use a Raspberry Pi to export a game for it. You can use any computer running any OS supported by Godot.
 
-#### Godot 2.x
+### Godot 2.x
 
 - In the editor, go to `Export`.
 - Select the `Linux/X11` template.
@@ -93,7 +99,7 @@ You don't have to use a Raspberry Pi to export a game for it. You can use any co
 - Click `Export`.
 - You can use the `.rpi4` extension when naming the exported game.
 
-#### Godot 3.x
+### Godot 3.x
 
 - In the editor, go to `Project -> Export`.
 - Select the `Linux/X11` template.
@@ -103,7 +109,7 @@ You don't have to use a Raspberry Pi to export a game for it. You can use any co
 - Uncheck `Export With Debug`.
 - Optionally, after the game is packed, you can rename the extension of the game's executable binary from `.x86` to `.rpi4` to avoid confusion.
 
-## Exporting an independant PCK file
+## How to export an independant PCK file
 
 You can just export a `.pck` file and run it with the export templates from this repository.
 
