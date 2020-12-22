@@ -27,13 +27,23 @@ If you would like official Godot support for the Raspberry Pi, there is [proposa
 
 ## Table of contents
 
-- [Downloads](#downloads)
 - [Status](#status)
+- [Downloads](#downloads)
 - [How to launch the editor (IDE)](#how-to-launch-the-editor-ide)
 - [How to export a game using the export templates](#how-to-export-a-game-using-the-export-templates)
 - [How to export an independant PCK file](#how-to-export-an-independant-pck-file)
 - [How to run a game](#how-to-run-a-game)
 - [Troubleshooting](#troubleshooting)
+
+## Status
+
+|  | 2.1.6 | 3.1.0 | 3.1.1 | 3.1.2 | 3.2.0 | 3.2.1 | 3.2.2 | 3.2.3 | 3.2.4 beta 4 |
+|-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Editor (IDE) | &#x2713; | * | * | * | * | * | * | * | &#x2713; |
+| Export templates | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
+
+- &#x2713;: Works perfectly.
+- \*: It works, but it's laggy/unresponsive at fullscreen (1920x1200). Making the editor 1/2 or 1/3 of that size makes it run better.
 
 ## Downloads
 
@@ -64,16 +74,6 @@ If you would like official Godot support for the Raspberry Pi, there is [proposa
 - Godot 3.2.4 beta 4
   - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.4.beta.4_rpi4_editor.bin)
   - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.4.beta.4_rpi4_export-template.bin)
-
-## Status
-
-|  | 2.1.6 | 3.1.0 | 3.1.1 | 3.1.2 | 3.2.0 | 3.2.1 | 3.2.2 | 3.2.3 | 3.2.4 beta 4 |
-|-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| Editor (IDE) | &#x2713; | * | * | * | * | * | * | * | &#x2713; |
-| Export templates | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
-
-- &#x2713;: Works perfectly.
-- \*: It works, but it's laggy/unresponsive at fullscreen (1920x1200). Making the editor 1/2 or 1/3 of that size makes it run better.
 
 ## How to launch the editor (IDE)
 
