@@ -2,6 +2,8 @@
 
 Unofficial [Godot Engine](https://godotengine.org/) editor and export templates binaries for the Raspberry Pi.
 
+![Unofficial Godot Engine for the Raspberry Pi](unofficial-godot-raspberry-pi.jpg)
+
 All the binaries are compiled and tested on a non-overcloked Raspberry Pi 4 4GB running [Raspberry Pi OS](https://www.raspberrypi.org/software/operating-systems/), following the [official documentation for compiling Godot in Linux](https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html).
 
 The SCons parameters and flags used to compile both the editor and the export templates are a mix between [FRT](https://github.com/efornara/frt) by [@efornara](https://github.com/efornara/) and this [blog post](https://bits.p1x.in/raspberry-pi-4-as-perfect-indie-console/) by [@w84death](https://github.com/w84death/).
