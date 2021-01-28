@@ -51,31 +51,39 @@ Up until `3.2.4 beta 4` there was an [audio issue](https://github.com/godotengin
 
 ## Downloads
 
-- Godot 2.1.6
+### 2.1.6
   - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_2.1.6_rpi4_editor.bin)
   - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_2.1.6_rpi4_export-template.bin)
-- Godot 3.1.0
+
+### 3.1.0
   - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.0_rpi4_editor.bin)
   - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.0_rpi4_export-template.bin)
-- Godot 3.1.1
+
+### 3.1.1
   - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.1_rpi4_editor.bin)
   - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.1_rpi4_export-template.bin)
-- Godot 3.1.2
+
+### 3.1.2
   - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.2_rpi4_editor.bin)
   - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.1.2_rpi4_export-template.bin)
-- Godot 3.2.0
+
+### 3.2.0
   - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.0_rpi4_editor.bin)
   - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.0_rpi4_export-template.bin)
-- Godot 3.2.1
+
+### 3.2.1
   - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.1_rpi4_editor.bin)
   - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.1_rpi4_export-template.bin)
-- Godot 3.2.2
+
+### 3.2.2
   - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.2_rpi4_editor.bin)
   - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_export-template.bin)
-- Godot 3.2.3
+
+### 3.2.3
   - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_editor.bin)
   - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_export-template.bin)
-- Godot 3.2.4 RC 1
+
+### 3.2.4 RC 1
   - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.1.0/godot_3.2.4.rc.1_rpi4_editor.bin.zip)
   - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.1.0/godot_3.2.4.rc.1_rpi4_export-template.bin.zip)
 
