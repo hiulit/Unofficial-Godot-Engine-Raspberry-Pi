@@ -1,8 +1,30 @@
-# Unofficial Godot Engine for the Raspberry Pi ![GitHub release (latest by date)](https://img.shields.io/github/v/release/hiulit/Unnoficial-Godot-Engine-Raspberry-Pi)
+# Unofficial Godot Engine for the Raspberry Pi
 
 Unofficial [Godot Engine](https://godotengine.org/) editor and export templates binaries for the [Raspberry Pi](https://www.raspberrypi.org/).
 
 ![Unofficial Godot Engine for the Raspberry Pi](unofficial-godot-raspberry-pi.jpg)
+
+**NOTES**:
+
+- Currently only the Raspberry Pi 4 is supported. In case you only need to use export templates, you can use the ones from [FRT: a Godot "platform" targeting single board computers](https://github.com/efornara/frt), which offers support for multiple Raspberry Pi revisions.
+- The Raspberry Pi only supports GLES2.
+- The Raspberry Pi doesn't support GPU particles, only CPU particles.
+- We don't have Godot 3.0.6 binaries because it doesn't have GLES2 support, only GLES3.
+
+If you would like official Godot support for the Raspberry Pi, there is [proposal](https://github.com/godotengine/godot-proposals/issues/988) about it. Go there and give us a thumbs up so we can get it 👍 😉 !
+
+## Table of contents
+
+- [Compiling](#compiling)
+- [Status](#status)
+- [Downloads](#downloads)
+- [How to launch the editor (IDE)](#how-to-launch-the-editor-ide)
+- [How to export a game using the export templates](#how-to-export-a-game-using-the-export-templates)
+- [How to export an independant PCK file](#how-to-export-an-independant-pck-file)
+- [How to run a game](#how-to-run-a-game)
+- [Troubleshooting](#troubleshooting)
+
+## Compiling
 
 All the binaries are compiled and tested on a non-overcloked Raspberry Pi 4 4GB running [Raspberry Pi OS](https://www.raspberrypi.org/software/operating-systems/), following the [official documentation for compiling Godot in Linux](https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html).
 
@@ -16,28 +38,10 @@ scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=c
 
 Up until `3.2.4 beta 4` there was an [audio issue](https://github.com/godotengine/godot/pull/43928) with Godot on a Raspberry Pi. To compile prior versions with the audio issue fixed, all references to `uint8_t` must be changed to `int16_t` in `drivers/alsa/audio_driver_alsa.cpp`.
 
-**NOTES**:
-
-- Currently only the Raspberry Pi 4 is supported. In case you only need to use export templates, you can use the ones from [FRT: a Godot "platform" targeting single board computers](https://github.com/efornara/frt), which offers support for multiple Raspberry Pi revisions.
-- The Raspberry Pi only supports GLES2.
-- The Raspberry Pi doesn't support GPU particles, only CPU particles.
-- We don't have Godot 3.0.6 binaries because it doesn't have GLES2 support, only GLES3.
-
-If you would like official Godot support for the Raspberry Pi, there is [proposal](https://github.com/godotengine/godot-proposals/issues/988) about it. Go there and give us a thumbs up so we can get it 👍 😉 !
-
-## Table of contents
-
-- [Status](#status)
-- [Downloads](#downloads)
-- [How to launch the editor (IDE)](#how-to-launch-the-editor-ide)
-- [How to export a game using the export templates](#how-to-export-a-game-using-the-export-templates)
-- [How to export an independant PCK file](#how-to-export-an-independant-pck-file)
-- [How to run a game](#how-to-run-a-game)
-- [Troubleshooting](#troubleshooting)
 
 ## Status
 
-|  | 2.1.6 | 3.1.0 | 3.1.1 | 3.1.2 | 3.2.0 | 3.2.1 | 3.2.2 | 3.2.3 | 3.2.4 beta 4 |
+|  | 2.1.6 | 3.1.0 | 3.1.1 | 3.1.2 | 3.2.0 | 3.2.1 | 3.2.2 | 3.2.3 | 3.2.4 RC 1 |
 |-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | Editor (IDE) | &#x2713; | * | * | * | * | * | * | * | &#x2713; |
 | Export templates | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
@@ -71,11 +75,11 @@ If you would like official Godot support for the Raspberry Pi, there is [proposa
 - Godot 3.2.3
   - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_editor.bin)
   - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.3_rpi4_export-template.bin)
-- Godot 3.2.4 beta 4
-  - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.4.beta.4_rpi4_editor.bin)
-  - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.0.0/godot_3.2.4.beta.4_rpi4_export-template.bin)
+- Godot 3.2.4 RC 1
+  - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.1.0/godot_3.2.4.rc.1_rpi4_editor.bin.zip)
+  - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.1.0/godot_3.2.4.rc.1_rpi4_export-template.bin.zip)
 
-## How to launch the editor (IDE)
+## How to launch the Editor (IDE)
 
 To open the editor, run:
 
@@ -91,11 +95,11 @@ You might need to give executable permissions to the binary. If that's the case,
 sudo chmod +x godot_x.x.x_rpi4_editor.bin
 ```
 
-## How to export a game using the export templates
+## How to export a game using the Export Templates
 
-**NOTE**:
+**NOTES**:
 
-You don't have to use a Raspberry Pi to export a game for it. You can use any computer running any OS supported by Godot.
+- You don't have to use a Raspberry Pi to export a game for it. You can use any computer running any OS supported by Godot.
 
 ### Godot 2.x
 
