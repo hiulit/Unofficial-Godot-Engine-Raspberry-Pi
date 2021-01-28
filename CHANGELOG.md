@@ -10,6 +10,6 @@
 
 - New Godot [3.2.4 RC 1](https://godotengine.org/article/release-candidate-godot-3-2-4-rc-1) binaries.
 
-## [1.0.0] - 2020-17-12
+## [1.0.0] - 2020-12-17
 
 - Released stable version.
