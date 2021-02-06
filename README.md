@@ -46,6 +46,7 @@ Up until `3.2.4 beta 4` there was an [audio issue](https://github.com/godotengin
 | Editor (IDE) | &#x2713; | \* | \* | \* | \* | \* | \* | \* | &#x2713; |
 | Export templates | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
 | Headless | - | \*\* | \*\* | \*\* | \*\* | \*\* | \*\* | \*\* | \*\* |
+| Server | - | \*\* | \*\* | \*\* | \*\* | \*\* | \*\* | \*\* | \*\* |
 
 - &#x2713;: Works perfectly.
 - \*: It works, but it's laggy/unresponsive at fullscreen (1920x1200). Making the editor 1/2 or 1/3 of that size makes it run better.
