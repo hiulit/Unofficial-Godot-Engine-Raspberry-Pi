@@ -26,7 +26,7 @@ If you would like official Godot support for the Raspberry Pi, there is [proposa
 
 ## Compiling
 
-All the binaries are compiled and tested on a non-overcloked Raspberry Pi 4 4GB running [Raspberry Pi OS](https://www.raspberrypi.org/software/operating-systems/), following the [official documentation for compiling Godot in Linux](https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html).
+All the binaries are compiled and tested on a non-overcloked Raspberry Pi 4 4GB running [Raspberry Pi OS](https://www.raspberrypi.org/software/operating-systems/) (32 bits), following the [official documentation for compiling Godot in Linux](https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html).
 
 **NOTES**:
 
