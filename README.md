@@ -1,6 +1,6 @@
 # Unofficial Godot Engine for the Raspberry Pi
 
-Unofficial [Godot Engine](https://godotengine.org/) editor and export templates binaries for the [Raspberry Pi](https://www.raspberrypi.org/).
+Unofficial [Godot Engine](https://godotengine.org/) binaries for the [Raspberry Pi](https://www.raspberrypi.org/).
 
 ![Unofficial Godot Engine for the Raspberry Pi](unofficial-godot-raspberry-pi.jpg)
 
