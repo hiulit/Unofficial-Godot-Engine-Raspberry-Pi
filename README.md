@@ -6,66 +6,39 @@ Unofficial [Godot Engine](https://godotengine.org/) binaries for the [Raspberry 
 
 ## Limitations
 
-- Currently **only** the Raspberry Pi 4 is supported. In case you just need to use export templates, you can use the ones from [FRT: a Godot "platform" targeting single board computers](https://github.com/efornara/frt), which offers support for multiple Raspberry Pi revisions.
 - The Raspberry Pi only supports GLES2.
 - The Raspberry Pi doesn't support GPU particles, only CPU particles.
 - We don't have Godot 3.0.6 binaries because it doesn't have GLES2 support, only GLES3.
+- If the binaries from this repository don't work, you can try the ones from [FRT: a Godot "platform" targeting single board computers](https://github.com/efornara/frt), which offers support for multiple Raspberry Pi revisions and other single-board computers and are well tested.
+- We don't offer any kind of support. The binaries are distributed as-is 🙃.
 
-If you would like official Godot support for the Raspberry Pi, there is [proposal](https://github.com/godotengine/godot-proposals/issues/988) about it. Go there and give us a thumbs up so we can get it 👍 😉 !
+If you would like official Godot support for the Raspberry Pi, there is a [proposal](https://github.com/godotengine/godot-proposals/issues/988) about it. Go there and give us a thumbs up so we can get it 👍 😉 !
 
 ## Table of contents
 
 - [Compiling](#compiling)
 - [Status](#status)
 - [Downloads](#downloads)
-- [How to launch the editor (IDE)](#how-to-launch-the-editor-ide)
-- [How to export a game using the export templates](#how-to-export-a-game-using-the-export-templates)
-- [How to export an independant PCK file](#how-to-export-an-independant-pck-file)
+- [How to launch the Editor](#how-to-launch-the-editor)
+- [How to export a game using the Export Templates](#how-to-export-a-game-using-the-export-templates)
+- [How to export an independent PCK file](#how-to-export-an-independent-pck-file)
 - [How to run a game](#how-to-run-a-game)
 - [Troubleshooting](#troubleshooting)
 
 ## Compiling
 
-All the binaries are compiled and tested on a non-overcloked Raspberry Pi 4 4GB running [Raspberry Pi OS](https://www.raspberrypi.org/software/operating-systems/) (32 bits), following the [official documentation for compiling Godot in Linux](https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html).
-
-**NOTES**:
-
-- Up until `3.2.4 beta 4` there was an [audio issue](https://github.com/godotengine/godot/pull/43928) with Godot on a Raspberry Pi. To compile prior versions with the audio issue fixed, all references to `uint8_t` must be changed to `int16_t` in `drivers/alsa/audio_driver_alsa.cpp`.
-
-The SCons parameters and flags used to compile the binaries are a mix between [FRT](https://github.com/efornara/frt) by [@efornara](https://github.com/efornara/) and this [blog post](https://bits.p1x.in/raspberry-pi-4-as-perfect-indie-console/) by [@w84death](https://github.com/w84death/).
-
-### Editor (IDE)
-
-```
-scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=cortex-a72 -mcpu=cortex-a72 -mfloat-abi=hard -mlittle-endian -munaligned-access -mfpu=neon-fp-armv8" -j4
-```
-
-### Export templates
-
-```
-scons platform=x11 target=release tools=no use_llvm=yes CCFLAGS="-mtune=cortex-a72 -mcpu=cortex-a72 -mfloat-abi=hard -mlittle-endian -munaligned-access -mfpu=neon-fp-armv8" -j4
-```
-
-### Headless
-
-```
-scons platform=server target=release_debug tools=yes use_llvm=yes CCFLAGS="-mtune=cortex-a72 -mcpu=cortex-a72 -mfloat-abi=hard -mlittle-endian -munaligned-access -mfpu=neon-fp-armv8" -j4
-```
-
-### Server
-
-```
-scons platform=server target=release tools=no use_llvm=yes CCFLAGS="-mtune=cortex-a72 -mcpu=cortex-a72 -mfloat-abi=hard -mlittle-endian -munaligned-access -mfpu=neon-fp-armv8" -j4
-```
+See [COMPILING](/COMPILING.md).
 
 ## Status
 
-|  | 2.1.6 | 3.1.0 | 3.1.1 | 3.1.2 | 3.2.0 | 3.2.1 | 3.2.2 | 3.2.3 | 3.2.4 RC 1 |
-|-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| Editor (IDE) | &#x2713; | \* | \* | \* | \* | \* | \* | \* | &#x2713; |
-| Export templates | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
-| Headless | - | \*\* | \*\* | \*\* | \*\* | \*\* | \*\* | \*\* | \*\* |
-| Server | - | \*\* | \*\* | \*\* | \*\* | \*\* | \*\* | \*\* | \*\* |
+This table refers to the Raspberry Pi 4 only. Prior version are untested.
+
+|  | 2.1.6 | 3.1.2 | 3.2.3 | 3.3 |
+|-|:-:|:-:|:-:|:-:|
+| Editor | &#x2713; | \* | \* | &#x2713; |
+| Export template | &#x2713; | &#x2713; | &#x2713; | &#x2713;
+| Headless | - | \*\* | \*\* | \*\* | \*\* |
+| Server | - | \*\* | \*\* | \*\* | \*\* |
 
 - &#x2713;: Works perfectly.
 - \*: It works, but it's laggy/unresponsive at fullscreen (1920x1200). Making the editor 1/2 or 1/3 of that size makes it run better.
@@ -74,58 +47,41 @@ scons platform=server target=release tools=no use_llvm=yes CCFLAGS="-mtune=corte
 ## Downloads
 
 ### 2.1.6
-  - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_2.1.6_rpi4_editor.zip)
-  - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_2.1.6_rpi4_export-template.zip)
-
-### 3.1.0
-  - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.1.0_rpi4_editor.zip)
-  - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.1.0_rpi4_export-template.zip)
-  - [Headless](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.1.0_rpi4_headless.zip)
-  - [Server](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.1.0_rpi4_server.zip)
-
-### 3.1.1
-  - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.1.1_rpi4_editor.zip)
-  - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.1.1_rpi4_export-template.zip)
-  - [Headless](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.1.1_rpi4_headless.zip)
-  - [Server](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.1.1_rpi4_server.zip)
+  - Raspberry Pi 4
+    - [Editor](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_2.1.6_rpi4_editor.zip)
+    - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_2.1.6_rpi4_export-template.zip)
 
 ### 3.1.2
-  - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.1.2_rpi4_editor.zip)
-  - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.1.2_rpi4_export-template.zip)
-  - [Headless](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.1.2_rpi4_headless.zip)
-  - [Server](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.1.2_rpi4_server.zip)
 
-### 3.2.0
-  - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.0_rpi4_editor.zip)
-  - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.0_rpi4_export-template.zip)
-  - [Headless](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.0_rpi4_headless.zip)
-  - [Server](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.0_rpi4_server.zip)
+Each ZIP file contains: Editor, Export template, Headless and Server.
 
-### 3.2.1
-  - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.1_rpi4_editor.zip)
-  - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.1_rpi4_export-template.zip)
-  - [Headless](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.1_rpi4_headless.zip)
-  - [Server](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.1_rpi4_server.zip)
-
-### 3.2.2
-  - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.2_rpi4_editor.zip)
-  - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.3_rpi4_export-template.zip)
-  - [Headless](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.2_rpi4_headless.zip)
-  - [Server](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.2_rpi4_server.zip)
+- [Raspberry Pi 0]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.1.2_stable_rpi0.zip))
+- [Raspberry Pi 1]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.1.2_stable_rpi1.zip))
+- [Raspberry Pi 2]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.1.2_stable_rpi2.zip))
+- [Raspberry Pi 3]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.1.2_stable_rpi3.zip))
+- [Raspberry Pi 4]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.1.2_stable_rpi4.zip))
 
 ### 3.2.3
-  - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.3_rpi4_editor.zip)
-  - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.3_rpi4_export-template.zip)
-  - [Headless](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.3_rpi4_headless.zip)
-  - [Server](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.3_rpi4_server.zip)
 
-### 3.2.4 RC 1
-  - [Editor (IDE)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.4.rc.1_rpi4_editor.zip)
-  - [Export template](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.4.rc.1_rpi4_export-template.zip)
-  - [Headless](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.4.rc.1_rpi4_headless.zip)
-  - [Server](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.2.0/godot_3.2.4.rc.1_rpi4_server.zip)
+Each ZIP file contains: Editor, Export template, Headless and Server.
 
-## How to launch the Editor (IDE)
+- [Raspberry Pi 0]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.2.3_stable_rpi0.zip))
+- [Raspberry Pi 1]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.2.3_stable_rpi1.zip))
+- [Raspberry Pi 2]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.2.3_stable_rpi2.zip))
+- [Raspberry Pi 3]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.2.3_stable_rpi3.zip))
+- [Raspberry Pi 4]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.2.3_stable_rpi4.zip))
+
+### 3.3
+
+Each ZIP file contains: Editor, Export template, Headless and Server.
+
+- [Raspberry Pi 0]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.3_stable_rpi0.zip))
+- [Raspberry Pi 1]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.3_stable_rpi1.zip))
+- [Raspberry Pi 2]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.3_stable_rpi2.zip))
+- [Raspberry Pi 3]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.3_stable_rpi3.zip))
+- [Raspberry Pi 4]((https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.3_stable_rpi4.zip))
+
+## How to launch the Editor
 
 To open the editor, run:
 
@@ -143,9 +99,7 @@ sudo chmod +x godot_x.x.x_rpi4_editor.bin
 
 ## How to export a game using the Export Templates
 
-**NOTES**:
-
-- You don't have to use a Raspberry Pi to export a game for it. You can use any computer running any OS supported by Godot.
+> You don't have to use a Raspberry Pi to export a game for it. You can use any computer running any OS supported by Godot.
 
 ### Godot 2.x
 
@@ -167,16 +121,16 @@ sudo chmod +x godot_x.x.x_rpi4_editor.bin
 - Uncheck `Export With Debug`.
 - Optionally, after the game is packed, you can rename the extension of the game's executable binary from `.x86` to `.rpi4` to avoid confusion.
 
-## How to export an independant PCK file
+## How to export an independent PCK file
 
-You can just export a `.pck` file and run it with the export templates from this repository.
+You can export a `.pck` file and run it with the export templates from this repository.
 
 ### Godot 2.x
 
-- In the editor, go to `Project -> Export`.
+- In the editor, go to `Export`.
 - Select the `Linux/X11` template.
-- In `Binary Format`, uncheck `64 bits`.
-- Click `Export PCK/Zip`.
+- In `Binary`, uncheck `64 bits`.
+- Click `Export PCK/ZIP`.
 - Enter the name of your game with the `.pck` extension.
 - Click `OK`.
 
@@ -185,7 +139,7 @@ You can just export a `.pck` file and run it with the export templates from this
 - In the editor, go to `Project -> Export`.
 - Select the `Linux/X11` template.
 - In `Binary Format`, uncheck `64 bits`.
-- Click `Export PCK/Zip`.
+- Click `Export PCK/ZIP`.
 - Uncheck `Export With Debug`.
 - Enter the name of your game with the `.pck` extension.
 - Click `Save`.
@@ -194,7 +148,7 @@ You can just export a `.pck` file and run it with the export templates from this
 
 ### Case 1
 
-- The `.pck` file is embedded/compiled in the executable binary.
+- The is no `.pck` file (meaning that it's embedded/compiled in the executable binary).
 - The `.pck` file has the same name as the executable binary and they are both in the same directory.
 
 You can just run the executable binary, like this:
@@ -207,15 +161,11 @@ You can just run the executable binary, like this:
 
 - The `.pck` file has a different name than the executable binary.
 - The `.pck` file is in a different directory than the executable binary.
-- You are using an independant `.pck` file.
+- You are using an independent `.pck` file (without an executable binary).
 
 You'll have to pass the `.pck` file's path using the `--main-pack` option, like this:
 
 ```
-# Using your own exported binary.
-./name_of_your_godot_game.ext --main-pack "/path/to/the/pck/file.pck"
-
-# Using the export template binaries from this repository.
 ./godot_x.x.x_rpi4_export-template.bin --main-pack "/path/to/the/pck/file.pck"
 ```
 
@@ -235,16 +185,9 @@ If you get this error when trying to play a game:
 
 It means that the game you are trying to run uses the GLES3 video driver, which the Raspberri Pi doesn't support. 
 
-You'll have to force Godot to use the GLES3 video driver by passing the `--video-driver GLES2` parameter, like this:
+You'll have to force Godot to use the GLES2 video driver by passing the `--video-driver GLES2` parameter, like this:
 
 ```
-# Using your own exported binary.
-## Embedded/compiled PCK.
-./name_of_your_godot_game.ext --video-driver GLES2
-## Independant PCK.
-./name_of_your_godot_game.ext --main-pack "/path/to/the/pck/file.pck" --video-driver GLES2
-
-# Using the export template binaries from this repository.
 ./godot_x.x.x_rpi4_export-template.bin --main-pack "/path/to/the/pck/file.pck" --video-driver GLES2
 ```
 
@@ -264,7 +207,7 @@ Thanks to:
 - Emanuele Fornara ([@efornara](https://github.com/efornara)) - For creating [FRT - A Godot "platform" targeting single board computers](https://github.com/efornara/frt).
 - Krzysztof Jankowski [@w84death](https://github.com/w84death/) - For the [Raspberry Pi 4 as Perfect Indie Console](https://bits.p1x.in/raspberry-pi-4-as-perfect-indie-console/) blog post.
 
-## LICENSE
+## LICENSES
 
 - Source code: [MIT License](/LICENSE).
 - Godot - Game Engine: [MIT License](/LICENSE_GODOT.txt).

@@ -4,6 +4,17 @@
 
 - Up to date
 
+## [1.3.0] - 2021-04-23
+
+### Added
+
+- New Godot [3.3](https://godotengine.org/article/godot-3-3-has-arrived) binaries.
+- Binaries for the Raspberry Pi `0`, `1`, `2` and `3` (untested, but they should work).
+
+### Changed
+
+- All the binaries (`editor`, `export-template`, `headless` and `server`), starting at `3.1.2`, come packed in a single zip file.
+
 ## [1.2.0] - 2021-02-05
 
 ### Added
