@@ -4,6 +4,17 @@
 
 - Up to date
 
+## [1.4.0] - 2021-06-07
+
+### Added
+
+- New Godot `3.3.2` binaries.
+- Better documentation on compiling.
+
+### Removed
+
+- Binaries for the Raspberry Pi versions `0`, `1` and `2`. The toolchain only compiles for the Raspberry Pi versions `3` and `4`.
+
 ## [1.3.0] - 2021-04-23
 
 ### Added
