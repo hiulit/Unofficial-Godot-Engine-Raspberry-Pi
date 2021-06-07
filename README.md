@@ -18,12 +18,12 @@ If you would like official Godot support for the Raspberry Pi, there is a [propo
 
 - [Compiling](#compiling)
 - [Status](#status)
-- [Downloads](#downloads)
-- [How to launch the Editor](#how-to-launch-the-editor)
-- [How to export a game using the Export Templates](#how-to-export-a-game-using-the-export-templates)
-- [How to export an independent PCK file](#how-to-export-an-independent-pck-file)
-- [How to run a game](#how-to-run-a-game)
-- [Troubleshooting](#troubleshooting)
+- [Downloads](#-downloads)
+- [How to launch the Editor](#-how-to-launch-the-editor)
+- [How to export a game using the Export Templates](#-how-to-export-a-game-using-the-export-templates)
+- [How to export an independent PCK file](#%EF%B8%8F-how-to-export-an-independent-pck-file)
+- [How to run a game](#-how-to-run-a-game)
+- [Troubleshooting](#ℹ%EF%B8%8F-troubleshooting)
 
 ## Compiling
 
