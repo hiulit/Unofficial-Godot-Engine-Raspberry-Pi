@@ -191,9 +191,9 @@ See [CHANGELOG](/CHANGELOG.md).
 
 Feel free to:
 
-- [Open an issue](/issues) if you find a bug.
-- [Create a pull request](/pulls) if you have a new cool feature to add to the project.
-- [Start a new discussion](/discussions) about a feature request.
+- [Open an issue](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/issues) if you find a bug.
+- [Create a pull request](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/pulls) if you have a new cool feature to add to the project.
+- [Start a new discussion](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/discussions) about a feature request.
 
 ## 🙌 Supporting this project
 
