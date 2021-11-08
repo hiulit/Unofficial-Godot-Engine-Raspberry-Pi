@@ -4,6 +4,12 @@
 
 - Up to date
 
+## [1.7.0] - 2021-11-08
+
+### Added
+
+- New Godot `3.4` binaries.
+
 ## [1.6.0] - 2021-10-04
 
 ### Added
