@@ -1,6 +1,10 @@
 # Compiling
 
 - [Compile on the Raspberry Pi](#compile-on-the-raspberry-pi)
+  - [Raspberry Pi 0 and 1](#raspberry-pi-0-and-1)
+  - [Raspberry Pi 2](#raspberry-pi-2)
+  - [Raspberry Pi 3](#raspberry-pi-3)
+  - [Raspberry Pi 4](#raspberry-pi-4)
 - [Cross-compile from Linux x86_64](#cross-compile-from-linux-x86_64)
 
 **NOTES**:
@@ -97,26 +101,57 @@ scons platform=server target=release tools=no use_llvm=yes CCFLAGS="-mcpu=cortex
 
 #### Editor
 
+##### 32 bit
+
 ```
 scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-mcpu=cortex-a72 -mtune=cortex-a72 -mfpu=neon-fp-armv8 -mfloat-abi=hard -mlittle-endian -munaligned-access" -j4
 ```
 
+##### 64 bit
+
+```
+scons platform=x11 target=release_debug tools=yes use_llvm=yes CCFLAGS="-march=armv8-a+fp+simd" arch=arm64 -j4
+```
+
 #### Export templates
+
+##### 32 bit
 
 ```
 scons platform=x11 target=release tools=no use_llvm=yes CCFLAGS="-mcpu=cortex-a72 -mtune=cortex-a72 -mfpu=neon-fp-armv8 -mfloat-abi=hard -mlittle-endian -munaligned-access" -j4
 ```
 
+##### 64 bit
+
+```
+scons platform=x11 target=release tools=no use_llvm=yes CCFLAGS="-march=armv8-a+fp+simd" arch=arm64 -j4
+```
+
 #### Headless
+
+##### 32 bit
 
 ```
 scons platform=server target=release_debug tools=yes use_llvm=yes CCFLAGS="-mcpu=cortex-a72 -mtune=cortex-a72 -mfpu=neon-fp-armv8 -mfloat-abi=hard -mlittle-endian -munaligned-access" -j4
 ```
 
+##### 64 bit
+
+```
+scons platform=server target=release_debug tools=yes use_llvm=yes CCFLAGS="-march=armv8-a+fp+simd" arch=arm64 -j4
+```
 #### Server
+
+##### 32 bit
 
 ```
 scons platform=server target=release tools=no use_llvm=yes CCFLAGS="-mcpu=cortex-a72 -mtune=cortex-a72 -mfpu=neon-fp-armv8 -mfloat-abi=hard -mlittle-endian -munaligned-access" -j4
+```
+
+##### 64 bit
+
+```
+scons platform=server target=release tools=no use_llvm=yes CCFLAGS="-march=armv8-a+fp+simd" arch=arm64 -j4
 ```
 
 ## Cross-compile from Linux x86_64
