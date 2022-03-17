@@ -4,12 +4,22 @@
 
 - Up to date
 
+## [1.11.0] - 2022-03-17
+
+### Added
+
+- New `64 bits` binaries (`2.1.6`, `3.1.2`, `3.3.4`) for the Raspberry Pi 4.
+
+### Changed
+
+- Godot `2.1.6` binaries are now zipped.
+
 ## [1.10.0] - 2022-03-14
 
 ### Added
 
 - New Godot `3.4.3` binaries.
-- New `64-bits` binaries for the Raspberry Pi 4.
+- New `64 bits` binaries for the Raspberry Pi 4.
 
 ## [1.9.0] - 2021-12-22
 
