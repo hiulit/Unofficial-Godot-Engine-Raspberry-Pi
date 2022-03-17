@@ -16,9 +16,9 @@
 ## Compile on the Raspberry Pi
 
 - [Raspberry Pi 0 and 1](/compiling/raspberry_pi_0_1.md)
-- [Raspberry Pi 2](/compiling/raspberry_pi_0_1.md)
-- [Raspberry Pi 3](/compiling/raspberry_pi_0_1.md)
-- [Raspberry Pi 4](/compiling/raspberry_pi_0_1.md)
+- [Raspberry Pi 2](/compiling/raspberry_pi_2.md)
+- [Raspberry Pi 3](/compiling/raspberry_pi_3.md)
+- [Raspberry Pi 4](/compiling/raspberry_pi_4.md)
 
 ## Cross-compile from Linux x86_64
 
