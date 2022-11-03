@@ -54,31 +54,31 @@ Each ZIP file contains: Editor, Export template, Headless and Server.
 These ZIP files only contain: Editor and Export template.
 
 - [Raspberry Pi 4](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.11.0/godot_2.1.6-stable_rpi4.zip)
-- [Raspberry Pi 4 (64 bits)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.11.0/godot_2.1.6-stable_rpi4_64.zip)
+- [Raspberry Pi 3/4 (64 bits)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.11.0/godot_2.1.6-stable_rpi4_64.zip)
 
 ### 3.1.2
 
 - [Raspberry Pi 3](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.1.2-stable_rpi3.zip)
 - [Raspberry Pi 4](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.3.0/godot_3.1.2-stable_rpi4.zip)
-- [Raspberry Pi 4 (64 bits)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.11.0/godot_3.1.2-stable_rpi4_64.zip)
+- [Raspberry Pi 3/4 (64 bits)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.11.0/godot_3.1.2-stable_rpi4_64.zip)
 
 ### 3.3.4
 
 - [Raspberry Pi 3](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.6.0/godot_3.3.4-stable_rpi3.zip)
 - [Raspberry Pi 4](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.6.0/godot_3.3.4-stable_rpi4.zip)
-- [Raspberry Pi 4 (64 bits)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.11.0/godot_3.3.4-stable_rpi4_64.zip)
+- [Raspberry Pi 3/4 (64 bits)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.11.0/godot_3.3.4-stable_rpi4_64.zip)
 
 ### 3.4.5
 
 - [Raspberry Pi 3](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.13.0/godot_3.4.5-stable_rpi3.zip)
 - [Raspberry Pi 4](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.13.0/godot_3.4.5-stable_rpi4.zip)
-- [Raspberry Pi 4 (64 bits)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.13.0/godot_3.4.5-stable_rpi4_64.zip)
+- [Raspberry Pi 3/4 (64 bits)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.13.0/godot_3.4.5-stable_rpi4_64.zip)
 
 ### 3.5.1
 
 - [Raspberry Pi 3](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.14.0/godot_3.5.1-stable_rpi3.zip)
 - [Raspberry Pi 4](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.14.0/godot_3.5.1-stable_rpi4.zip)
-- [Raspberry Pi 4 (64 bits)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.14.0/godot_3.5.1-stable_rpi4_64.zip)
+- [Raspberry Pi 3/4 (64 bits)](https://github.com/hiulit/Unofficial-Godot-Engine-Raspberry-Pi/releases/download/v1.14.0/godot_3.5.1-stable_rpi4_64.zip)
 
 ## 🚀 How to launch the Editor
 
