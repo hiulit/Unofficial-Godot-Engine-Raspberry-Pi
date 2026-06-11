@@ -110,7 +110,7 @@ sudo chmod +x godot_x.x.x_rpi4_editor.bin
 - Click `Export`.
 - You can use the `.rpi4` extension when naming the exported game.
 
-\* *Only for 32 bits binaries.*
+\* *Only for 32-bit binaries.*
 
 ### Godot 3.x
 
@@ -122,7 +122,7 @@ sudo chmod +x godot_x.x.x_rpi4_editor.bin
 - Uncheck `Export With Debug`.
 - Optionally, after the game is packed, you can rename the extension of the game's executable binary from `.x86` to `.rpi4` to avoid confusion.
 
-\* *Only for 32 bits binaries.*
+\* *Only for 32-bit binaries.*
 
 ## 🗃️ How to export an independent PCK file
 
@@ -137,7 +137,7 @@ You can export a `.pck` file and run it with the export templates from this repo
 - Enter the name of your game with the `.pck` extension.
 - Click `OK`.
 
-\* *Only for 32 bits binaries.*
+\* *Only for 32-bit binaries.*
 
 ### Godot 3.x
 
@@ -149,7 +149,7 @@ You can export a `.pck` file and run it with the export templates from this repo
 - Enter the name of your game with the `.pck` extension.
 - Click `Save`.
 
-\* *Only for 32 bits binaries.*
+\* *Only for 32-bit binaries.*
 
 ## 🎮 How to run a game
 
