@@ -34,7 +34,7 @@ See [COMPILING](/COMPILING.md).
 
 This table refers to the Raspberry Pi 4 only. Other versions are untested.
 
-|  | 2.1.6 | 3.1.2 | 3.2.3 | 3.3.4 | 3.4.5 | 3.5.3 | 3.6.2
+|  | 2.1.6 | 3.1.2 | 3.2.3 | 3.3.4 | 3.4.5 | 3.5.3 | 3.6.3
 |-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | Editor | &#x2713; | \*| \*| &#x2713; | &#x2713; | &#x2713; | &#x2713; |
 | Export template | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
